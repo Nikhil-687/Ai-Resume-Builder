@@ -10,10 +10,10 @@ const LoginPopup = () => {
     const [error, setError] = useState('');
     const router = useRouter();
 
-    // Toggle between Login and Signup
+   
     const toggleForm = () => setIsLogin(!isLogin);
 
-    // Handle Form Submission
+    
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -34,7 +34,7 @@ const LoginPopup = () => {
             const data = await res.json();
 
             if (res.ok) {
-                router.push('/dashboard'); // Redirect after successful login/signup
+                router.push('/dashboard'); 
             } else {
                 setError(data.message || 'Something went wrong.');
             }
